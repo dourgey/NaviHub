@@ -1,0 +1,51 @@
+.ant-menu-item {
+    color: #ff8a8a !important;
+}
+
+.ant-menu-item-selected {
+    background-color: #ff6b6b !important;
+    color: #ffffff !important;
+}
+
+.ant-menu-item:hover {
+    background-color: #ff8a8a !important;
+    color: #ffffff !important;
+}
+
+.ant-menu-item a {
+    color: #ff8a8a !important;
+}
+
+.ant-menu-item-selected a {
+    color: #ffffff !important;
+}
+
+.ant-menu-item:hover a {
+    color: #ffffff !important;
+}
+
+.ant-menu-dark .ant-menu-item {
+    color: #ff8a8a !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+    background-color: #ff6b6b !important;
+    color: #ffffff !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+    background-color: #ff8a8a !important;
+    color: #ffffff !important;
+}
+
+.ant-menu-dark .ant-menu-item a {
+    color: #ff8a8a !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected a {
+    color: #ffffff !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover a {
+    color: #ffffff !important;
+} 

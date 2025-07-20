@@ -1,5 +1,9 @@
 # NaviHub - 现代化导航管理系统
 
+[![Badge](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg?style=flat-square)](https://996.icu/#/en_US)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![Slack](https://img.shields.io/badge/slack-996icu-green.svg?style=flat-square)](https://join.slack.com/t/996icu/shared_invite/enQtNjI0MjEzMTUxNDI0LTkyMGViNmJiZjYwOWVlNzQ3NmQ4NTQyMDRiZTNmOWFkMzYxZWNmZGI0NDA4MWIwOGVhOThhMzc3NGQyMDBhZDc)
+
 NaviHub 是一个现代化的导航管理系统，提供美观的界面和强大的管理功能。系统采用前后端分离架构，使用 React 和 FastAPI 构建，支持 Docker 部署。
 
 ## 功能特点
@@ -41,7 +45,7 @@ NaviHub 是一个现代化的导航管理系统，提供美观的界面和强大
 1. 克隆项目
 
 ```bash
-git clone https://github.com/yourusername/navihub.git
+git clone https://github.com/dourgey/navihub.git
 cd navihub
 ```
 
@@ -194,4 +198,4 @@ navihub/
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+本项目采用 Anti-996 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情

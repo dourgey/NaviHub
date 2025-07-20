@@ -15,18 +15,21 @@ NaviHub 是一个现代化的导航管理系统，提供美观的界面和强大
 ## 技术栈
 
 ### 前端
+
 - React 18
 - Ant Design
 - React Router
 - Axios
 
 ### 后端
+
 - FastAPI
 - SQLAlchemy
 - PostgreSQL
 - JWT 认证
 
 ### 部署
+
 - Docker
 - Docker Compose
 - Nginx (可选)
@@ -36,12 +39,14 @@ NaviHub 是一个现代化的导航管理系统，提供美观的界面和强大
 ### 使用 Docker 部署
 
 1. 克隆项目
+
 ```bash
 git clone https://github.com/yourusername/navihub.git
 cd navihub
 ```
 
 2. 配置环境变量
+
 ```bash
 # 复制环境变量示例文件
 cp .env.example .env
@@ -49,11 +54,13 @@ cp .env.example .env
 ```
 
 3. 启动服务
+
 ```bash
 docker-compose up -d
 ```
 
 4. 访问应用
+
 - 前端: http://localhost:3000
 - 后端 API: http://localhost:8000
 - API 文档: http://localhost:8000/docs
@@ -63,6 +70,7 @@ docker-compose up -d
 #### 后端部署
 
 1. 创建虚拟环境
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
@@ -70,12 +78,14 @@ venv\Scripts\activate     # Windows
 ```
 
 2. 安装依赖
+
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
 3. 配置数据库
+
 ```bash
 # 创建 .env 文件并设置环境变量
 DATABASE_URL=postgresql://user:password@localhost:5432/navihub
@@ -85,6 +95,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
 4. 启动服务
+
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
@@ -92,23 +103,27 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 #### 前端部署
 
 1. 安装依赖
+
 ```bash
 cd frontend
 npm install
 ```
 
 2. 配置环境变量
+
 ```bash
 # 创建 .env 文件
 REACT_APP_API_URL=http://localhost:8000
 ```
 
 3. 启动开发服务器
+
 ```bash
 npm start
 ```
 
 4. 构建生产版本
+
 ```bash
 npm run build
 ```
@@ -135,27 +150,32 @@ navihub/
 ## API 文档
 
 启动后端服务后，访问以下地址查看完整的 API 文档：
+
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
 ## 环境变量
 
 ### 后端环境变量
+
 - `DATABASE_URL`: PostgreSQL 数据库连接 URL
 - `SECRET_KEY`: JWT 密钥
 - `ALGORITHM`: JWT 算法
 - `ACCESS_TOKEN_EXPIRE_MINUTES`: 访问令牌过期时间
 
 ### 前端环境变量
+
 - `REACT_APP_API_URL`: 后端 API 地址
 
 ## 开发指南
 
 ### 代码规范
+
 - 后端遵循 PEP 8 规范
 - 前端使用 ESLint 和 Prettier 进行代码格式化
 
 ### 提交规范
+
 - feat: 新功能
 - fix: 修复问题
 - docs: 文档修改
@@ -175,9 +195,3 @@ navihub/
 ## 许可证
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 联系方式
-
-- 项目维护者: [Your Name]
-- 邮箱: [your.email@example.com]
-- 项目链接: [https://github.com/yourusername/navihub] 

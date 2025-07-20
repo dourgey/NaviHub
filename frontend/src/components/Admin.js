@@ -15,6 +15,10 @@ const Admin = () => {
     const [form] = Form.useForm();
     const [userForm] = Form.useForm();
 
+    const apiBase = process.env.REACT_APP_API_URL;
+
+    console.log("API base:", process.env.REACT_APP_API_URL);
+
     useEffect(() => {
         fetchLinks();
         fetchUsers();
@@ -23,7 +27,7 @@ const Admin = () => {
     const fetchLinks = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('/api/links/', {
+            const response = await fetch(`${apiBase}/api/links/`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -49,7 +53,7 @@ const Admin = () => {
     const fetchUsers = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('/api/users/', {
+            const response = await fetch(`${apiBase}/api/users/`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -80,8 +84,8 @@ const Admin = () => {
             delete values.id;
             const token = localStorage.getItem('token');
             const url = editingLink 
-                ? `/api/links/${editingLink.id}/`
-                : '/api/links/';
+                ? `${apiBase}/api/links/${editingLink.id}/`
+                : `${apiBase}/api/links/`;
             const method = editingLink ? 'PUT' : 'POST';
 
             const response = await fetch(url, {
@@ -114,8 +118,8 @@ const Admin = () => {
             const values = await userForm.validateFields();
             const token = localStorage.getItem('token');
             const url = editingUser 
-                ? `/api/users/${editingUser.id}/`
-                : '/api/users/';
+                ? `${apiBase}/api/users/${editingUser.id}/`
+                : `${apiBase}/api/users/`;
             const method = editingUser ? 'PUT' : 'POST';
 
             const response = await fetch(url, {
@@ -146,7 +150,7 @@ const Admin = () => {
     const handleDeleteLink = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`/api/links/${id}/`, {
+            const response = await fetch(`${apiBase}/api/links/${id}/`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -170,7 +174,7 @@ const Admin = () => {
     const handleDeleteUser = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`/api/users/${id}/`, {
+            const response = await fetch(`${apiBase}/api/users/${id}/`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

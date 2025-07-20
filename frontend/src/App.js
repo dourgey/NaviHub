@@ -13,6 +13,8 @@ const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
 
+    const apiBase = process.env.REACT_APP_API_URL;
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         const admin = localStorage.getItem('isAdmin') === 'true';

@@ -5,10 +5,11 @@ import { Form, Input, Button, Alert } from 'antd';
 const Login = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const onFinish = async (values) => {
         try {
-            const response = await fetch('/api/auth/token/', {
+            const response = await fetch(`${apiUrl}/api/auth/token/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -24,7 +25,7 @@ const Login = () => {
                 localStorage.setItem('token', data.access_token);
                 
                 // 获取用户信息
-                const userResponse = await fetch('/api/users/me', {
+                const userResponse = await fetch(`${apiUrl}/api/users/me`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${data.access_token}`,
